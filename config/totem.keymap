@@ -177,6 +177,8 @@
             label = "TD_1ESC";
             #binding-cells = <0>;
             bindings = <&kp LG(LA(LC(N1)))>, <&kp LG(LA(LC(GRAVE)))>;
+
+            tapping-term-ms = <350>;
         };
 
         ht_12esc: ht_12esc {
@@ -237,7 +239,7 @@
             bindings = <
                    &none                 &none                   &kp LSHFT      &kp LA(C)        &kp LC(G)        &none      &kp PAGE_UP                 &kp PAGE_UP   &kp PAGE_DOWN   &none
                    &kp LC(A)             &kp LC(C)               &kp LC(V)      &kp LC(Z)        &kp LC(F)        &none      &none                       &msc SCRL_UP  &msc SCRL_DOWN  &kp UP_ARROW
-&kp LG(LA(LC(G)))  &kp LS(LC(UP_ARROW))  &kp LS(LC(DOWN_ARROW))  &kp LS(LC(V))  &kp KP_NUMBER_4  &kp LS(LC(G))    &none      &none                       &none         &kp LEFT        &kp DOWN_ARROW  &kp RIGHT
+&kp LG(LA(LC(G)))  &kp LS(LC(UP_ARROW))  &kp LS(LC(DOWN_ARROW))  &kp LS(LC(V))  &kp KP_NUMBER_4  &kp LS(LC(G))    &mc_PW     &none                       &none         &kp LEFT        &kp DOWN_ARROW  &kp RIGHT
                                                                  &kp LC(S)      &tog 1           &kp LA(F4)       &kp SPACE  &ht_12esc LG(LA(LC(N2))) 0  &trans
             >;
         };
@@ -283,10 +285,10 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-                &bt BT_NXT    &none         &none         &none         &none           &trans  &none   &kp LS(TAB)  &none         &none
-                &bt BT_CLR    &none         &none         &trans        &trans          &trans  &none   &kp TAB      &none         &kp LS(LC(UP_ARROW))
-&bt BT_CLR_ALL  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &trans  &none   &none        &kp LC(LEFT)  &kp LS(LC(DOWN))      &kp LC(RIGHT)
-                                            &trans        &trans        &trans          &trans  &trans  &trans
+                &bt BT_NXT    &none         &kp LSHFT     &none         &none           &trans     &none      &kp LS(TAB)  &none         &none
+                &bt BT_CLR    &none         &kp LALT      &kp LCTRL     &trans          &trans     &none      &kp TAB      &none         &kp LS(LC(UP_ARROW))
+&bt BT_CLR_ALL  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &trans     &none      &none        &kp LC(LEFT)  &kp LS(LC(DOWN))      &kp LC(RIGHT)
+                                            &trans        &trans        &trans          &mkp LCLK  &mkp LCLK  &mkp RCLK
             >;
         };
 
