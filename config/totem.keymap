@@ -20,13 +20,6 @@
 #define TVP1 4
 #define TVP2 5
 
-&mt {
-    quick-tap-ms = <100>;
-    global-quick-tap;
-    flavor = "tap-preferred";
-    tapping-term-ms = <170>;
-};
-
 / {
     combos {
         compatible = "zmk,combos";
@@ -140,14 +133,27 @@
     };
 
     behaviors {
-        hm: hm {
-            compatible = "zmk,behavior-hold-tap";
-            label = "HM";
-            bindings = <&none>, <&none>;
+        OSM_Meh: OSM_Meh {
+            compatible = "zmk,behavior-sticky-key";
+            label = "OSM_MEH";
+            bindings = <&kp>;
+            #binding-cells = <1>;
+            release-after-ms = <200>;
+            quick-release;
+        };
 
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            flavor = "tap-preferred";
+        td0: td0 {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TD0";
+            #binding-cells = <0>;
+            bindings = <&mt ESC TAB>, <&none>;
+        };
+
+        td1: td1 {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TD1";
+            #binding-cells = <0>;
+            bindings = <&mt LANG2 LANG1>, <&kp CAPS>;
         };
     };
 
@@ -175,8 +181,8 @@
             bindings = <
        &kp Q  &kp W  &kp E       &kp R            &kp T          &kp Y  &kp U      &kp I      &kp O    &kp P
        &kp A  &kp S  &kp D       &kp F            &kp G          &kp H  &kp J      &kp K      &kp L    &kp LS(NUMBER_1)
-&mo 2  &none  &kp Z  &kp X       &kp C            &kp V          &kp N  &kp M      &kp COMMA  &kp DOT  &kp FSLH          &kp ESC
-                     &kp DELETE  &lt 1 BACKSPACE  &lt 3 ENTER    &kp B  &kp SPACE  &none
+&mo 2  &td0   &kp Z  &kp X       &kp C            &kp V          &kp N  &kp M      &kp COMMA  &kp DOT  &kp FSLH          &kp ESC
+                     &kp DELETE  &lt 1 BACKSPACE  &lt 3 ENTER    &kp B  &kp SPACE  &td1
             >;
         };
 
