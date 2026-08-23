@@ -148,6 +148,28 @@
             bindings = <&kp H &kp O &kp N &kp E &kp Y &kp N &kp L &kp C &kp H &kp I &kp AT &kp G &kp M &kp A &kp I &kp L &kp DOT &kp C &kp O &kp M>;
             label = "M6";
         };
+
+        td2_tap: td2_tap {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&kp DOT &kp DOT &kp DOT &kp SPACE>,
+                <&macro_wait_time 10>,
+                <&kp LEFT>;
+
+            label = "TD2_TAP";
+        };
+
+        td2_hold: td2_hold {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&kp FSLH &kp FSLH &kp MINUS &kp SPACE>,
+                <&macro_wait_time 10>,
+                <&kp LEFT>;
+
+            label = "TD2_HOLD";
+        };
     };
 
     behaviors {
@@ -270,6 +292,29 @@
             #binding-cells = <0>;
             bindings = <&kp TAB>, <&m0>;
         };
+
+        td1_ios: td1_ios {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TD1_IOS";
+            #binding-cells = <0>;
+            bindings = <&kp LG(SPACE)>, <&kp CAPS>;
+        };
+
+        td2_ios_s: td2_ios_s {
+            compatible = "zmk,behavior-hold-tap";
+            label = "TD2_IOS_S";
+            bindings = <&td2_hold>, <&td2_tap>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+        };
+
+        td2_ios: td2_ios {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TD2_IOS";
+            #binding-cells = <0>;
+            bindings = <&td2_ios_s 0 0>, <&kp LS(GRAVE)>;
+        };
     };
 
     keymap {
@@ -381,19 +426,19 @@
 
         base_ios {
             bindings = <
-       &kp Q   &kp W  &kp E       &kp R            &kp T        &kp Y  &kp U      &kp I      &kp O       &kp P
-       &kp A   &kp S  &kp D       &kp F            &kp G        &kp H  &kp J      &kp K      &kp L       &kp EXCLAMATION
-&mo 2  &trans  &kp Z  &kp X       &kp C            &kp V        &kp N  &kp M      &kp COMMA  &kp PERIOD  &kp SLASH        &kp ESC
-                      &kp DELETE  &lt 5 BACKSPACE  &kp ENTER    &kp B  &kp SPACE  &trans
+       &kp Q    &kp W  &kp E       &kp R            &kp T        &kp Y  &kp U      &kp I      &kp O       &kp P
+       &kp A    &kp S  &kp D       &kp F            &kp G        &kp H  &kp J      &kp K      &kp L       &kp EXCLAMATION
+&mo 2  &kp TAB  &kp Z  &kp X       &kp C            &kp V        &kp N  &kp M      &kp COMMA  &kp PERIOD  &kp SLASH        &kp ESC
+                       &kp DELETE  &lt 5 BACKSPACE  &kp ENTER    &kp B  &kp SPACE  &td1_ios
             >;
         };
 
         work_ios {
             bindings = <
-        &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
-        &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans  &trans    &trans  &trans  &trans
+        &kp LA(LEFT)  &kp LA(RIGHT)  &kp LEFT_SHIFT  &trans       &kp LG(G)     &td9    &trans    &kp PAGE_UP    &kp LG(LEFT)   &trans
+        &kp LG(A)     &kp LG(C)      &kp LG(V)       &kp LG(Z)    &kp LG(F)     &td10   &td8      &kp PAGE_DOWN  &kp LG(RIGHT)  &kp UP
+&trans  &trans        &trans         &kp LG(H)       &kp LG(TAB)  &kp LG(GT)    &td11   &td4      &td5           &kp LEFT       &kp DOWN  &kp RIGHT
+                                     &trans          &trans       &trans        &trans  &td2_ios  &trans
             >;
         };
 
