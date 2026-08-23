@@ -431,7 +431,7 @@
 
         work_ios {
             bindings = <
-        &kp LA(LEFT)  &kp LA(RIGHT)  &kp LEFT_SHIFT  &trans       &kp LG(G)     &td9    &trans    &kp LG(LEFT_ARROW)  &kp LG(PAGE_UP)    &kp UP
+        &kp LA(LEFT)  &kp LA(RIGHT)  &kp LEFT_SHIFT  &bt BT_NXT   &kp LG(G)     &td9    &none     &kp LG(LEFT_ARROW)  &kp LG(PAGE_UP)    &kp UP
         &kp LG(A)     &kp LG(C)      &kp LG(V)       &kp LG(Z)    &kp LG(F)     &td10   &td8      &kp LG(RIGHT)       &kp LG(PAGE_DOWN)  &kp DOWN
 &trans  &trans        &trans         &kp LG(H)       &kp LG(TAB)  &kp LG(GT)    &td11   &td4      &td5                &kp LEFT           &trans    &kp RIGHT
                                      &trans          &trans       &trans        &trans  &td2_ios  &trans
