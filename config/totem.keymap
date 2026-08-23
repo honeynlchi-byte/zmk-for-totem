@@ -134,8 +134,19 @@
         m0: m0 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&none>;
+            bindings =
+                <&kp N0 &kp N6 &kp N0 &kp N6 &kp N2 &kp N2>,
+                <&macro_wait_time 10>,
+                <&kp ENTER>;
+
             label = "M0";
+        };
+
+        m6: m6 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp H &kp O &kp N &kp E &kp Y &kp N &kp L &kp C &kp H &kp I &kp AT &kp G &kp M &kp A &kp I &kp L &kp DOT &kp C &kp O &kp M>;
+            label = "M6";
         };
     };
 
@@ -363,7 +374,7 @@
             bindings = <
                   &trans  &kp LC(LS(PAGE_UP))  &kp LEFT_SHIFT  &kp LC(LS(PAGE_DOWN))  &kp LC(LA(LEFT))     &kp LC(LG(UP))         &trans                &kp LS(TAB)            &trans        &trans
                   &trans  &trans               &kp LEFT_ALT    &kp LEFT_CONTROL       &kp LC(LA(RIGHT))    &kp LC(LG(DOWN))       &kp LC(LA(LG(UP)))    &kp TAB                &trans        &kp LC(LS(UP))
-&kp LS(LG(LEFT))  &trans  &trans               &trans          &trans                 &trans               &kp LC(LA(LG(MINUS)))  &kp LC(LA(LG(DOWN)))  &kp LC(LA(LG(EQUAL)))  &kp LC(LEFT)  &kp LC(LS(DOWN))  &kp LC(RIGHT)
+&kp LS(LG(LEFT))  &trans  &trans               &trans          &trans                 &m6                  &kp LC(LA(LG(MINUS)))  &kp LC(LA(LG(DOWN)))  &kp LC(LA(LG(EQUAL)))  &kp LC(LEFT)  &kp LC(LS(DOWN))  &kp LC(RIGHT)
                                                &trans          &trans                 &trans               &kp ENTER              &trans                &trans
             >;
         };
