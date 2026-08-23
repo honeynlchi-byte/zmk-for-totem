@@ -361,9 +361,9 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-                   &m1                &m2                &kp LEFT_SHIFT  &kp LA(C)  &kp LC(G)        &td9   &td7  &kp PAGE_UP    &kp HOME  &kp F5
-                   &kp LC(A)          &kp LC(C)          &kp LC(V)       &kp LC(Z)  &kp LC(F)        &td10  &td8  &kp PAGE_DOWN  &kp END   &kp UP
-&kp LC(LS(LA(A)))  &kp LC(LA(LG(A)))  &kp LC(LA(LG(B)))  &kp LC(LS(V))   &td12      &kp LC(LS(G))    &td11  &td4  &td5           &kp LEFT  &kp DOWN  &kp RIGHT
+                   &m1                &m2                &kp LEFT_SHIFT  &kp LA(C)  &kp LC(G)        &td9   &td7  &kp HOME  &kp PAGE_UP    &kp UP
+                   &kp LC(A)          &kp LC(C)          &kp LC(V)       &kp LC(Z)  &kp LC(F)        &td10  &td8  &kp END   &kp PAGE_DOWN  &kp DOWN
+&kp LC(LS(LA(A)))  &kp LC(LA(LG(A)))  &kp LC(LA(LG(B)))  &kp LC(LS(V))   &td12      &kp LC(LS(G))    &td11  &td4  &td5      &kp LEFT       &kp F5    &kp RIGHT
                                                          &kp F2          &trans     &kp LC(S)        &td6   &td2  &td3
             >;
         };
@@ -387,10 +387,10 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-       &kp LA(PRINTSCREEN)  &trans          &kp C_VOLUME_UP  &kp C_PREV                 &trans             &kp MINUS  &kp N7        &kp N8          &kp N9        &msc SCRL_RIGHT
-       &kp LC(LS(ESC))      &msc SCRL_UP    &kp C_VOL_DN     &kp C_NEXT                 &msc SCRL_LEFT     &trans     &kp NUMBER_4  &kp N5          &kp NUMBER_6  &msc SCRL_UP
-&mo 2  &kp LEFT_SHIFT       &msc SCRL_DOWN  &kp C_MUTE       &kp C_PP                   &msc SCRL_RIGHT    &kp EQUAL  &kp NUMBER_1  &kp NUMBER_2    &kp NUMBER_3  &msc SCRL_DOWN   &trans
-                                            &mkp RCLK        &OSM_Meh LC(LS(LEFT_ALT))  &kp C_AL_CALC      &kp N0     &kp SPACE     &msc SCRL_LEFT
+       &kp LA(PRINTSCREEN)  &msc SCRL_UP     &kp C_VOLUME_UP  &kp C_PREV                 &trans             &kp MINUS  &kp N7        &kp N8          &kp N9        &msc SCRL_UP
+       &kp LEFT_SHIFT       &msc SCRL_DOWN   &kp C_VOL_DN     &kp C_NEXT                 &msc SCRL_LEFT     &trans     &kp NUMBER_4  &kp N5          &kp NUMBER_6  &msc SCRL_DOWN
+&mo 2  &trans               &kp LC(LS(ESC))  &kp C_MUTE       &kp C_PP                   &msc SCRL_RIGHT    &kp EQUAL  &kp NUMBER_1  &kp NUMBER_2    &kp NUMBER_3  &msc SCRL_RIGHT  &trans
+                                             &kp C_AL_CALC    &OSM_Meh LC(LS(LEFT_ALT))  &mkp RCLK          &kp N0     &kp SPACE     &msc SCRL_LEFT
             >;
         };
 
@@ -413,10 +413,10 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-                  &trans  &kp LC(LS(PAGE_UP))  &kp LEFT_SHIFT  &kp LC(LS(PAGE_DOWN))  &kp LC(LA(LEFT))     &kp LC(LG(UP))         &trans                &kp LS(TAB)            &trans        &trans
-                  &trans  &trans               &kp LEFT_ALT    &kp LEFT_CONTROL       &kp LC(LA(RIGHT))    &kp LC(LG(DOWN))       &kp LC(LA(LG(UP)))    &kp TAB                &trans        &kp LC(LS(UP))
-&kp LS(LG(LEFT))  &trans  &trans               &trans          &trans                 &m6                  &kp LC(LA(LG(MINUS)))  &kp LC(LA(LG(DOWN)))  &kp LC(LA(LG(EQUAL)))  &kp LC(LEFT)  &kp LC(LS(DOWN))  &kp LC(RIGHT)
-                                               &bt BT_NXT      &trans                 &trans               &kp ENTER              &trans                &trans
+                  &trans  &kp LC(LS(PAGE_UP))  &kp LEFT_SHIFT  &kp LC(LS(PAGE_DOWN))  &kp LC(LA(LEFT))     &kp LC(LG(UP))         &trans                &kp LS(TAB)            &trans        &kp LC(LS(UP))
+                  &trans  &trans               &kp LEFT_ALT    &kp LEFT_CONTROL       &kp LC(LA(RIGHT))    &kp LC(LG(DOWN))       &kp LC(LA(LG(UP)))    &kp TAB                &trans        &kp LC(LS(DOWN))
+&kp LS(LG(LEFT))  &trans  &trans               &trans          &trans                 &m6                  &kp LC(LA(LG(MINUS)))  &kp LC(LA(LG(DOWN)))  &kp LC(LA(LG(EQUAL)))  &kp LC(LEFT)  &trans            &kp LC(RIGHT)
+                                               &bt BT_NXT      &trans                 &trans               &trans                 &trans                &trans
             >;
         };
 
@@ -431,9 +431,9 @@
 
         work_ios {
             bindings = <
-        &kp LA(LEFT)  &kp LA(RIGHT)  &kp LEFT_SHIFT  &trans       &kp LG(G)     &td9    &trans    &kp PAGE_UP    &kp LG(LEFT)   &trans
-        &kp LG(A)     &kp LG(C)      &kp LG(V)       &kp LG(Z)    &kp LG(F)     &td10   &td8      &kp PAGE_DOWN  &kp LG(RIGHT)  &kp UP
-&trans  &trans        &trans         &kp LG(H)       &kp LG(TAB)  &kp LG(GT)    &td11   &td4      &td5           &kp LEFT       &kp DOWN  &kp RIGHT
+        &kp LA(LEFT)  &kp LA(RIGHT)  &kp LEFT_SHIFT  &trans       &kp LG(G)     &td9    &trans    &kp LG(LEFT_ARROW)  &kp LG(PAGE_UP)    &kp UP
+        &kp LG(A)     &kp LG(C)      &kp LG(V)       &kp LG(Z)    &kp LG(F)     &td10   &td8      &kp LG(RIGHT)       &kp LG(PAGE_DOWN)  &kp DOWN
+&trans  &trans        &trans         &kp LG(H)       &kp LG(TAB)  &kp LG(GT)    &td11   &td4      &td5                &kp LEFT           &trans    &kp RIGHT
                                      &trans          &trans       &trans        &trans  &td2_ios  &trans
             >;
         };
