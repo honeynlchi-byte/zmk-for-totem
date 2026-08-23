@@ -10,11 +10,11 @@
 //
 // ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
 
+#include <dt-bindings/zmk/mouse.h>
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/pointing.h>
-#include <dt-bindings/zmk/mouse.h>
 
 #define BASE 0
 #define NAV  1
@@ -72,14 +72,9 @@
             key-positions = <35 36 34 33>;
         };
 
-        Soft_Off {
-            bindings = <&soft_off>;
-            key-positions = <20 31>;
-        };
-
         T_setting {
             bindings = <&tog 6>;
-            key-positions = <32 33 36 37>;
+            key-positions = <20 31>;
         };
     };
 
@@ -342,7 +337,7 @@
             bindings = <
        &kp Q  &kp W  &kp E       &kp R            &kp T          &kp Y  &kp U      &kp I      &kp O    &kp P
        &kp A  &kp S  &kp D       &kp F            &kp G          &kp H  &kp J      &kp K      &kp L    &kp LS(NUMBER_1)
-&mo 2  &td0   &kp Z  &kp X       &kp C            &kp V          &kp N  &kp M      &kp COMMA  &kp DOT  &kp FSLH          &lt 2 ESC
+&mo 2  &kp Z  &kp X  &kp C       &kp V            &td0           &kp N  &kp M      &kp COMMA  &kp DOT  &kp FSLH          &lt 2 ESC
                      &kp DELETE  &lt 1 BACKSPACE  &lt 3 ENTER    &kp B  &kp SPACE  &td1
             >;
         };
@@ -421,16 +416,16 @@
                   &trans  &kp LC(LS(PAGE_UP))  &kp LEFT_SHIFT  &kp LC(LS(PAGE_DOWN))  &kp LC(LA(LEFT))     &kp LC(LG(UP))         &trans                &kp LS(TAB)            &trans        &trans
                   &trans  &trans               &kp LEFT_ALT    &kp LEFT_CONTROL       &kp LC(LA(RIGHT))    &kp LC(LG(DOWN))       &kp LC(LA(LG(UP)))    &kp TAB                &trans        &kp LC(LS(UP))
 &kp LS(LG(LEFT))  &trans  &trans               &trans          &trans                 &m6                  &kp LC(LA(LG(MINUS)))  &kp LC(LA(LG(DOWN)))  &kp LC(LA(LG(EQUAL)))  &kp LC(LEFT)  &kp LC(LS(DOWN))  &kp LC(RIGHT)
-                                               &trans          &trans                 &trans               &kp ENTER              &trans                &trans
+                                               &bt BT_NXT      &trans                 &trans               &kp ENTER              &trans                &trans
             >;
         };
 
         base_ios {
             bindings = <
-       &kp Q    &kp W  &kp E       &kp R            &kp T        &kp Y  &kp U      &kp I      &kp O       &kp P
-       &kp A    &kp S  &kp D       &kp F            &kp G        &kp H  &kp J      &kp K      &kp L       &kp EXCLAMATION
-&mo 2  &kp TAB  &kp Z  &kp X       &kp C            &kp V        &kp N  &kp M      &kp COMMA  &kp PERIOD  &kp SLASH        &kp ESC
-                       &kp DELETE  &lt 5 BACKSPACE  &kp ENTER    &kp B  &kp SPACE  &td1_ios
+       &kp Q  &kp W  &kp E       &kp R            &kp T        &kp Y  &kp U      &kp I      &kp O       &kp P
+       &kp A  &kp S  &kp D       &kp F            &kp G        &kp H  &kp J      &kp K      &kp L       &kp EXCLAMATION
+&mo 2  &kp Z  &kp X  &kp C       &kp V            &kp TAB      &kp N  &kp M      &kp COMMA  &kp PERIOD  &kp SLASH        &kp ESC
+                     &kp DELETE  &lt 5 BACKSPACE  &kp ENTER    &kp B  &kp SPACE  &td1_ios
             >;
         };
 
