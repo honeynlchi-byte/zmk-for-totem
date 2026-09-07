@@ -73,7 +73,7 @@
         };
 
         T_setting {
-            bindings = <&tog 6>;
+            bindings = <&bt BT_CLR_ALL>;
             key-positions = <20 31>;
         };
 
@@ -454,6 +454,15 @@
         };
 
         bluetooth {
+            bindings = <
+            &trans  &trans  &trans  &trans  &trans    &trans        &trans        &trans        &trans  &trans
+            &trans  &trans  &trans  &trans  &trans    &trans        &trans        &trans        &trans  &trans
+&sys_reset  &trans  &trans  &trans  &trans  &trans    &trans        &trans        &trans        &trans  &trans  &bt BT_CLR
+                            &trans  &trans  &trans    &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2
+            >;
+        };
+
+        layer_7 {
             bindings = <
             &trans  &trans  &trans  &trans  &trans    &trans        &trans        &trans        &trans  &trans
             &trans  &trans  &trans  &trans  &trans    &trans        &trans        &trans        &trans  &trans
