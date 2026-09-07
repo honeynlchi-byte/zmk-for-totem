@@ -69,12 +69,17 @@
 
         T_ios {
             bindings = <&tog 4>;
-            key-positions = <35 36 34 33>;
+            key-positions = <34 33 32>;
         };
 
         T_setting {
             bindings = <&tog 6>;
             key-positions = <20 31>;
+        };
+
+        bt_swith {
+            bindings = <&bt BT_NXT>;
+            key-positions = <35 36 37>;
         };
     };
 
@@ -416,7 +421,7 @@
                   &trans  &kp LC(LS(PAGE_UP))  &kp LEFT_SHIFT  &kp LC(LS(PAGE_DOWN))  &kp LC(LA(LEFT))     &kp LC(LG(UP))         &trans                &kp LS(TAB)            &trans        &kp LC(LS(UP))
                   &trans  &trans               &kp LEFT_ALT    &kp LEFT_CONTROL       &kp LC(LA(RIGHT))    &kp LC(LG(DOWN))       &kp LC(LA(LG(UP)))    &kp TAB                &trans        &kp LC(LS(DOWN))
 &kp LS(LG(LEFT))  &trans  &trans               &trans          &trans                 &m6                  &kp LC(LA(LG(MINUS)))  &kp LC(LA(LG(DOWN)))  &kp LC(LA(LG(EQUAL)))  &kp LC(LEFT)  &trans            &kp LC(RIGHT)
-                                               &bt BT_NXT      &trans                 &trans               &trans                 &trans                &trans
+                                               &trans          &trans                 &trans               &trans                 &trans                &trans
             >;
         };
 
@@ -431,7 +436,7 @@
 
         work_ios {
             bindings = <
-        &kp LA(LEFT)  &kp LA(RIGHT)  &kp LEFT_SHIFT  &bt BT_NXT   &kp LG(G)     &td9    &none     &kp LG(LEFT_ARROW)  &kp LG(PAGE_UP)    &kp UP
+        &kp LA(LEFT)  &kp LA(RIGHT)  &kp LEFT_SHIFT  &none        &kp LG(G)     &td9    &none     &kp LG(LEFT_ARROW)  &kp LG(PAGE_UP)    &kp UP
         &kp LG(A)     &kp LG(C)      &kp LG(V)       &kp LG(Z)    &kp LG(F)     &td10   &td8      &kp LG(RIGHT)       &kp LG(PAGE_DOWN)  &kp DOWN
 &trans  &trans        &trans         &kp LG(H)       &kp LG(TAB)  &kp LG(GT)    &td11   &td4      &td5                &kp LEFT           &trans    &kp RIGHT
                                      &trans          &trans       &trans        &trans  &td2_ios  &trans
