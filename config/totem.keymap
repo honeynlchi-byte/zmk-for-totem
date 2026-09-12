@@ -104,6 +104,24 @@
             key-positions = <37 36 35 1>;
             timeout-ms = <200>;
         };
+
+        BT_dis0 {
+            bindings = <&bt BT_DISC 0>;
+            key-positions = <37 36 35 13>;
+            timeout-ms = <200>;
+        };
+
+        BT_dis1 {
+            bindings = <&bt BT_DISC 1>;
+            key-positions = <35 36 37 12>;
+            timeout-ms = <200>;
+        };
+
+        BT_dis2 {
+            bindings = <&bt BT_DISC 2>;
+            key-positions = <37 36 35 11>;
+            timeout-ms = <200>;
+        };
     };
 
     macros {
