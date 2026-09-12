@@ -30,66 +30,79 @@
         L_shift {
             bindings = <&kp LEFT_SHIFT>;
             key-positions = <11 12 13>;
+            timeout-ms = <200>;
         };
 
         R_Shift {
             bindings = <&kp RIGHT_SHIFT>;
             key-positions = <16 17 18>;
+            timeout-ms = <200>;
         };
 
         L_Ctrl {
             bindings = <&kp LEFT_CONTROL>;
             key-positions = <1 2 3>;
+            timeout-ms = <200>;
         };
 
         R_Ctrl {
             bindings = <&kp RIGHT_CONTROL>;
             key-positions = <6 7 8>;
+            timeout-ms = <200>;
         };
 
         L_Alt {
             bindings = <&kp LEFT_ALT>;
             key-positions = <13 14>;
+            timeout-ms = <200>;
         };
 
         R_Alt {
             bindings = <&kp RIGHT_ALT>;
             key-positions = <15 16>;
+            timeout-ms = <200>;
         };
 
         L_Gui {
             bindings = <&kp LEFT_GUI>;
             key-positions = <24 25>;
+            timeout-ms = <200>;
         };
 
         R_Gui {
             bindings = <&kp RIGHT_GUI>;
             key-positions = <26 27>;
+            timeout-ms = <200>;
         };
 
         T_ios {
             bindings = <&tog 4>;
             key-positions = <34 33 32>;
+            timeout-ms = <200>;
         };
 
         T_setting {
             bindings = <&bt BT_CLR_ALL>;
             key-positions = <20 31>;
+            timeout-ms = <200>;
         };
 
         bt_swith_1 {
             bindings = <&bt BT_SEL 0>;
             key-positions = <35 36 37 3>;
+            timeout-ms = <200>;
         };
 
         bt_swith_2 {
             bindings = <&bt BT_SEL 1>;
             key-positions = <37 36 35 2>;
+            timeout-ms = <200>;
         };
 
         bt_swith_3 {
             bindings = <&bt BT_SEL 2>;
             key-positions = <37 36 35 1>;
+            timeout-ms = <200>;
         };
     };
 
@@ -308,7 +321,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "TD1_IOS";
             #binding-cells = <0>;
-            bindings = <&kp LG(SPACE)>, <&kp CAPS>;
+            bindings = <&kp LC(SPACE)>, <&kp CAPS>;
         };
 
         td2_ios_s: td2_ios_s {
