@@ -440,10 +440,10 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-       &kp LG(LS(S))        &msc SCRL_UP     &kp C_VOLUME_UP  &kp C_PREV                 &trans             &kp MINUS  &kp N7        &kp N8          &kp N9        &msc SCRL_UP
-       &kp LEFT_SHIFT       &msc SCRL_DOWN   &kp C_VOL_DN     &kp C_NEXT                 &msc SCRL_LEFT     &trans     &kp NUMBER_4  &kp N5          &kp NUMBER_6  &msc SCRL_DOWN
-&mo 2  &kp LA(PRINTSCREEN)  &kp LC(LS(ESC))  &kp C_MUTE       &kp C_PP                   &msc SCRL_RIGHT    &kp EQUAL  &kp NUMBER_1  &kp NUMBER_2    &kp NUMBER_3  &msc SCRL_RIGHT  &trans
-                                             &kp C_AL_CALC    &OSM_Meh LC(LS(LEFT_ALT))  &mkp RCLK          &kp N0     &kp SPACE     &msc SCRL_LEFT
+        &kp LG(LS(S))        &msc SCRL_UP     &kp C_VOLUME_UP  &kp C_PREV                 &trans             &kp MINUS  &kp N7        &kp N8          &kp N9        &msc SCRL_UP
+        &kp LEFT_SHIFT       &msc SCRL_DOWN   &kp C_VOL_DN     &kp C_NEXT                 &msc SCRL_LEFT     &trans     &kp NUMBER_4  &kp N5          &kp NUMBER_6  &msc SCRL_DOWN
+&trans  &kp LA(PRINTSCREEN)  &kp LC(LS(ESC))  &kp C_MUTE       &kp C_PP                   &msc SCRL_RIGHT    &kp EQUAL  &kp NUMBER_1  &kp NUMBER_2    &kp NUMBER_3  &msc SCRL_RIGHT  &trans
+                                              &kp C_AL_CALC    &OSM_Meh LC(LS(LEFT_ALT))  &mkp RCLK          &kp N0     &kp SPACE     &msc SCRL_LEFT
             >;
         };
 
