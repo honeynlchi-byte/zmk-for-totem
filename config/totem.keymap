@@ -106,17 +106,17 @@
         };
 
         BT_dis_0 {
-            bindings = <&bt0>;
+            bindings = <&bt BT_DISC 0>;
             key-positions = <35 36 37 13>;
         };
 
         BT_dis_1 {
-            bindings = <&bt1>;
+            bindings = <&bt BT_DISC 1>;
             key-positions = <35 36 37 12>;
         };
 
         BT_dis_2 {
-            bindings = <&bt2>;
+            bindings = <&bt BT_DISC 2>;
             key-positions = <36 35 37 11>;
         };
     };
@@ -208,45 +208,6 @@
                 <&kp LEFT>;
 
             label = "TD2_HOLD";
-        };
-
-        bt0: bt0 {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings =
-                <&bt BT_DISC 1>,
-                <&macro_wait_time 10>,
-                <&bt BT_DISC 2>,
-                <&macro_wait_time 20>,
-                <&to 0>;
-
-            label = "BT0";
-        };
-
-        bt1: bt1 {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings =
-                <&bt BT_DISC 0>,
-                <&macro_wait_time 10>,
-                <&bt BT_DISC 2>,
-                <&macro_wait_time 20>,
-                <&to 4>;
-
-            label = "BT1";
-        };
-
-        bt2: bt2 {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings =
-                <&bt BT_DISC 1>,
-                <&macro_wait_time 10>,
-                <&bt BT_DISC 0>,
-                <&macro_wait_time 20>,
-                <&to 4>;
-
-            label = "BT2";
         };
     };
 
