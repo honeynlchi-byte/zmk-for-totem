@@ -87,22 +87,37 @@
             timeout-ms = <200>;
         };
 
-        bt_swith_1 {
-            bindings = <&bt0>;
+        bt_swith_0 {
+            bindings = <&bt BT_SEL 0>;
             key-positions = <35 36 37 3>;
             timeout-ms = <200>;
         };
 
-        bt_swith_2 {
-            bindings = <&bt1>;
+        bt_swith_1 {
+            bindings = <&bt BT_SEL 1>;
             key-positions = <37 36 35 2>;
             timeout-ms = <200>;
         };
 
-        bt_swith_3 {
-            bindings = <&bt2>;
+        bt_swith_2 {
+            bindings = <&bt BT_SEL 2>;
             key-positions = <37 36 35 1>;
             timeout-ms = <200>;
+        };
+
+        BT_dis_0 {
+            bindings = <&bt0>;
+            key-positions = <35 36 37 13>;
+        };
+
+        BT_dis_1 {
+            bindings = <&bt1>;
+            key-positions = <35 36 37 12>;
+        };
+
+        BT_dis_2 {
+            bindings = <&bt2>;
+            key-positions = <36 35 37 11>;
         };
     };
 
@@ -199,8 +214,6 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
-                <&bt BT_SEL 0>,
-                <&macro_wait_time 20>,
                 <&bt BT_DISC 1>,
                 <&macro_wait_time 10>,
                 <&bt BT_DISC 2>,
@@ -214,8 +227,6 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
-                <&bt BT_SEL 1>,
-                <&macro_wait_time 20>,
                 <&bt BT_DISC 0>,
                 <&macro_wait_time 10>,
                 <&bt BT_DISC 2>,
@@ -229,8 +240,6 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
-                <&bt BT_SEL 2>,
-                <&macro_wait_time 20>,
                 <&bt BT_DISC 1>,
                 <&macro_wait_time 10>,
                 <&bt BT_DISC 0>,
