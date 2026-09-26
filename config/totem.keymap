@@ -226,6 +226,8 @@
             label = "TD1";
             #binding-cells = <0>;
             bindings = <&mt LANG2 LANG1>, <&kp CAPS>;
+
+            tapping-term-ms = <300>;
         };
 
         td2: td2 {
@@ -235,6 +237,8 @@
             bindings =
                 <&mt LC(LA(LG(NUMBER_2))) LC(LA(LG(NUMBER_1)))>,
                 <&kp LS(GRAVE)>;
+
+            tapping-term-ms = <300>;
         };
 
         td3: td3 {
@@ -244,6 +248,8 @@
             bindings =
                 <&mt LC(LA(LG(NUMBER_6))) LC(LA(LG(N5)))>,
                 <&kp LC(LA(LG(NUMBER_4)))>;
+
+            tapping-term-ms = <300>;
         };
 
         td4: td4 {
@@ -269,6 +275,8 @@
             label = "TD6";
             #binding-cells = <0>;
             bindings = <&mt LC(LA(LG(N0))) LC(LA(LG(N9)))>, <&m3>;
+
+            tapping-term-ms = <300>;
         };
 
         td7: td7 {
@@ -278,6 +286,8 @@
             bindings =
                 <&mt LC(LA(LG(GRAVE))) LC(LA(LG(COMMA)))>,
                 <&kp LC(LA(LG(PERIOD)))>;
+
+            tapping-term-ms = <300>;
         };
 
         td8: td8 {
@@ -285,6 +295,8 @@
             label = "TD8";
             #binding-cells = <0>;
             bindings = <&kp SQT>, <&kp LS(SQT)>;
+
+            tapping-term-ms = <300>;
         };
 
         td9: td9 {
@@ -292,6 +304,8 @@
             label = "TD9";
             #binding-cells = <0>;
             bindings = <&kp MINUS>, <&kp LS(MINUS)>;
+
+            tapping-term-ms = <300>;
         };
 
         td10: td10 {
@@ -299,6 +313,8 @@
             label = "TD10";
             #binding-cells = <0>;
             bindings = <&kp SEMICOLON>, <&kp LS(SEMICOLON)>;
+
+            tapping-term-ms = <300>;
         };
 
         td11: td11 {
@@ -306,6 +322,8 @@
             label = "TD11";
             #binding-cells = <0>;
             bindings = <&kp EQUAL>, <&kp LS(EQUAL)>;
+
+            tapping-term-ms = <300>;
         };
 
         td12: td12 {
@@ -313,6 +331,8 @@
             label = "TD12";
             #binding-cells = <0>;
             bindings = <&td12_s 0 F6>, <&m4>;
+
+            tapping-term-ms = <300>;
         };
 
         td12_s: td12_s {
@@ -330,6 +350,8 @@
             label = "TD0";
             #binding-cells = <0>;
             bindings = <&kp TAB>, <&m0>;
+
+            tapping-term-ms = <300>;
         };
 
         td1_ios: td1_ios {
@@ -337,6 +359,8 @@
             label = "TD1_IOS";
             #binding-cells = <0>;
             bindings = <&kp LC(SPACE)>, <&kp CAPS>;
+
+            tapping-term-ms = <300>;
         };
 
         td2_ios_s: td2_ios_s {
@@ -345,7 +369,7 @@
             bindings = <&td2_hold>, <&td2_tap>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <300>;
         };
 
         td2_ios: td2_ios {
@@ -353,6 +377,8 @@
             label = "TD2_IOS";
             #binding-cells = <0>;
             bindings = <&td2_ios_s 0 0>, <&kp LS(GRAVE)>;
+
+            tapping-term-ms = <300>;
         };
 
         td_space: td_space {
@@ -362,7 +388,7 @@
 
             #binding-cells = <2>;
             flavor = "tap-unless-interrupted";
-            tapping-term-ms = <200>;
+            tapping-term-ms = <300>;
         };
     };
 
