@@ -76,7 +76,7 @@
         };
 
         T_ios {
-            bindings = <&tog 4>;
+            bindings = <&tog 3>;
             key-positions = <34 33 32>;
             timeout-ms = <200>;
         };
@@ -416,12 +416,10 @@
             bindings = <
        &kp Q  &kp W  &kp E       &kp R                  &kp T          &kp Y  &kp U      &kp I      &kp O    &kp P
        &kp A  &kp S  &kp D       &kp F                  &kp G          &kp H  &kp J      &kp K      &kp L    &kp LS(NUMBER_1)
-&mo 2  &kp Z  &kp X  &kp C       &kp V                  &td0           &kp N  &kp M      &kp COMMA  &kp DOT  &kp FSLH          &lt 2 ESC
-                     &kp DELETE  &td_space 1 BACKSPACE  &lt 3 ENTER    &kp B  &kp SPACE  &td1
+&mo 5  &kp Z  &kp X  &kp C       &kp V                  &td0           &kp N  &kp M      &kp COMMA  &kp DOT  &kp FSLH          &lt 5 ESC
+                     &kp DELETE  &td_space 1 BACKSPACE  &lt 2 ENTER    &kp B  &kp SPACE  &td1
             >;
         };
-
-        // ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
 
         work_win {
             // ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
@@ -446,34 +444,6 @@
                                                          &kp F2          &trans     &kp LC(S)        &td6   &td2  &td3
             >;
         };
-
-        // ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
-
-        number {
-            // ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
-
-            label = "SYM";
-
-            // ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
-            //             ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓   ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓
-            //             ┃     !     ┃     @     ┃     #     ┃     $     ┃     %     ┃   ┃     ˆ     ┃     &     ┃     Ü     ┃     '     ┃     "     ┃
-            //             ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫
-            //             ┃     Ä     ┃           ┃    SZ     ┃           ┃           ┃   ┃   MUTE    ┃   YEN     ┃   EURO    ┃  POUND    ┃     Ö     ┃
-            // ┏━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┓
-            // ┃           ┃  EMAIL1   ┃  EMAIL2   ┃           ┃           ┃           ┃   ┃   VOL-    ┃   VOL+    ┃   LAST    ┃   NEXT    ┃     \     ┃           ┃
-            // ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
-            //                                     ┃           ┃    GIF    ┃    ADJ    ┃   ┃           ┃           ┃           ┃
-            //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
-
-            bindings = <
-        &kp LG(LS(S))        &msc SCRL_UP     &kp C_VOLUME_UP  &kp C_PREV                 &trans             &kp MINUS  &kp N7        &kp N8          &kp N9        &msc SCRL_UP
-        &kp LEFT_SHIFT       &msc SCRL_DOWN   &kp C_VOL_DN     &kp C_NEXT                 &msc SCRL_LEFT     &trans     &kp NUMBER_4  &kp N5          &kp NUMBER_6  &msc SCRL_DOWN
-&trans  &kp LA(PRINTSCREEN)  &kp LC(LS(ESC))  &kp C_MUTE       &kp C_PP                   &msc SCRL_RIGHT    &kp EQUAL  &kp NUMBER_1  &kp NUMBER_2    &kp NUMBER_3  &msc SCRL_RIGHT  &trans
-                                              &kp C_AL_CALC    &OSM_Meh LC(LS(LEFT_ALT))  &mkp RCLK          &kp N0     &kp SPACE     &msc SCRL_LEFT
-            >;
-        };
-
-        // ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
 
         edit_win {
             // ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
@@ -503,8 +473,8 @@
             bindings = <
        &kp Q  &kp W  &kp E       &kp R                  &kp T        &kp Y  &kp U      &kp I      &kp O       &kp P
        &kp A  &kp S  &kp D       &kp F                  &kp G        &kp H  &kp J      &kp K      &kp L       &kp EXCLAMATION
-&mo 2  &kp Z  &kp X  &kp C       &kp V                  &kp TAB      &kp N  &kp M      &kp COMMA  &kp PERIOD  &kp SLASH        &kp ESC
-                     &kp DELETE  &td_space 5 BACKSPACE  &kp ENTER    &kp B  &kp SPACE  &td1_ios
+&mo 5  &kp Z  &kp X  &kp C       &kp V                  &kp TAB      &kp N  &kp M      &kp COMMA  &kp PERIOD  &kp SLASH        &kp ESC
+                     &kp DELETE  &td_space 4 BACKSPACE  &kp ENTER    &kp B  &kp SPACE  &td1_ios
             >;
         };
 
@@ -514,6 +484,30 @@
         &kp LG(A)     &kp LG(C)      &kp LG(V)       &kp LG(Z)    &kp LG(F)     &td10   &td8      &kp LG(RIGHT)       &kp LG(PAGE_DOWN)  &kp DOWN
 &trans  &trans        &trans         &kp LG(H)       &kp LG(TAB)  &kp LG(GT)    &td11   &td4      &td5                &kp LEFT           &kp DOWN  &kp RIGHT
                                      &trans          &trans       &trans        &trans  &td2_ios  &trans
+            >;
+        };
+
+        number {
+            // ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+
+            label = "SYM";
+
+            // ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+            //             ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓   ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓
+            //             ┃     !     ┃     @     ┃     #     ┃     $     ┃     %     ┃   ┃     ˆ     ┃     &     ┃     Ü     ┃     '     ┃     "     ┃
+            //             ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫
+            //             ┃     Ä     ┃           ┃    SZ     ┃           ┃           ┃   ┃   MUTE    ┃   YEN     ┃   EURO    ┃  POUND    ┃     Ö     ┃
+            // ┏━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┓
+            // ┃           ┃  EMAIL1   ┃  EMAIL2   ┃           ┃           ┃           ┃   ┃   VOL-    ┃   VOL+    ┃   LAST    ┃   NEXT    ┃     \     ┃           ┃
+            // ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
+            //                                     ┃           ┃    GIF    ┃    ADJ    ┃   ┃           ┃           ┃           ┃
+            //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
+
+            bindings = <
+        &kp LG(LS(S))        &msc SCRL_UP     &kp C_VOLUME_UP  &kp C_PREV                 &trans             &kp MINUS  &kp N7        &kp N8          &kp N9        &msc SCRL_UP
+        &kp LEFT_SHIFT       &msc SCRL_DOWN   &kp C_VOL_DN     &kp C_NEXT                 &msc SCRL_LEFT     &trans     &kp NUMBER_4  &kp N5          &kp NUMBER_6  &msc SCRL_DOWN
+&trans  &kp LA(PRINTSCREEN)  &kp LC(LS(ESC))  &kp C_MUTE       &kp C_PP                   &msc SCRL_RIGHT    &kp EQUAL  &kp NUMBER_1  &kp NUMBER_2    &kp NUMBER_3  &msc SCRL_RIGHT  &trans
+                                              &kp C_AL_CALC    &OSM_Meh LC(LS(LEFT_ALT))  &mkp RCLK          &kp N0     &kp SPACE     &msc SCRL_LEFT
             >;
         };
 
